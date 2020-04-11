@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7106BCC62442809200108E2A /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7106BCC52442809200108E2A /* MainViewModelTests.swift */; };
+		7106BCC82442811C00108E2A /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7106BCC72442811C00108E2A /* LoginViewModelTests.swift */; };
+		7106BCCA2442814000108E2A /* RegisterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7106BCC92442814000108E2A /* RegisterViewModelTests.swift */; };
 		AC3229B024400860002445A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3229AF24400860002445A8 /* AppDelegate.swift */; };
 		AC3229B224400860002445A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3229B124400860002445A8 /* SceneDelegate.swift */; };
 		AC3229B924400867002445A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC3229B824400867002445A8 /* Assets.xcassets */; };
 		AC3229BC24400867002445A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC3229BA24400867002445A8 /* LaunchScreen.storyboard */; };
-		AC3229C724400868002445A8 /* MVVM_CTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3229C624400868002445A8 /* MVVM_CTests.swift */; };
 		AC8DDFB1244041AB0096AC61 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8DDFB0244041AB0096AC61 /* AppCoordinator.swift */; };
 		AC8DDFB4244041F10096AC61 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8DDFB3244041F10096AC61 /* MainViewController.swift */; };
 		AC8DDFB6244042120096AC61 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8DDFB5244042120096AC61 /* MainCoordinator.swift */; };
@@ -38,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7106BCC52442809200108E2A /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
+		7106BCC72442811C00108E2A /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		7106BCC92442814000108E2A /* RegisterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModelTests.swift; sourceTree = "<group>"; };
 		AC3229AC24400860002445A8 /* MVVM-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3229AF24400860002445A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC3229B124400860002445A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,7 +50,6 @@
 		AC3229BB24400867002445A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC3229BD24400867002445A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC3229C224400868002445A8 /* MVVM-CTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVVM-CTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC3229C624400868002445A8 /* MVVM_CTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_CTests.swift; sourceTree = "<group>"; };
 		AC3229C824400868002445A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC8DDFB0244041AB0096AC61 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		AC8DDFB3244041F10096AC61 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +84,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7106BCC42442806200108E2A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7106BCC52442809200108E2A /* MainViewModelTests.swift */,
+				7106BCC72442811C00108E2A /* LoginViewModelTests.swift */,
+				7106BCC92442814000108E2A /* RegisterViewModelTests.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		AC3229A324400860002445A8 = {
 			isa = PBXGroup;
 			children = (
@@ -117,7 +131,7 @@
 		AC3229C524400868002445A8 /* MVVM-CTests */ = {
 			isa = PBXGroup;
 			children = (
-				AC3229C624400868002445A8 /* MVVM_CTests.swift */,
+				7106BCC42442806200108E2A /* ViewModels */,
 				AC3229C824400868002445A8 /* Info.plist */,
 			);
 			path = "MVVM-CTests";
@@ -233,6 +247,7 @@
 					};
 					AC3229C124400868002445A8 = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1130;
 						TestTargetID = AC3229AB24400860002445A8;
 					};
 				};
@@ -302,7 +317,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC3229C724400868002445A8 /* MVVM_CTests.swift in Sources */,
+				7106BCCA2442814000108E2A /* RegisterViewModelTests.swift in Sources */,
+				7106BCC82442811C00108E2A /* LoginViewModelTests.swift in Sources */,
+				7106BCC62442809200108E2A /* MainViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,9 +500,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "MVVM-CTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -493,6 +511,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ttdp.MVVM-CTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVM-C.app/MVVM-C";
@@ -504,9 +523,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "MVVM-CTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
