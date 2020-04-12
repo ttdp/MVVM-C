@@ -15,7 +15,7 @@ class LoginViewController: ViewModelController<LoginViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(handleSignUp))
+        let addButton = UIBarButtonItem(title: "Sign up", style: .plain, target: self, action: #selector(handleSignUp))
         navigationItem.rightBarButtonItem = addButton
         
         view.backgroundColor = .white
@@ -24,7 +24,7 @@ class LoginViewController: ViewModelController<LoginViewModel> {
     // MARK: - Action
     
     @objc func handleSignUp() {
-        viewModel.showRegister()
+        viewModel.showSignUp()
     }
     
 }

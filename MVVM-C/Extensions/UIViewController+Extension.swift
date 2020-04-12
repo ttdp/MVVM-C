@@ -10,6 +10,14 @@ import UIKit
 
 extension UIViewController {
     
+    var naviGap: CGFloat {
+        return Screen.hasNotch ? 88.0 : 64.0
+    }
+    
+    var bottomGap: CGFloat {
+        return Screen.hasNotch ? 34.0 : 0.0
+    }
+    
     func topViewController() -> UIViewController? {
         if let navigationController = self as? UINavigationController {
             return navigationController.visibleViewController

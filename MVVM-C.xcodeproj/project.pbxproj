@@ -10,6 +10,8 @@
 		7106BCC62442809200108E2A /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7106BCC52442809200108E2A /* MainViewModelTests.swift */; };
 		7106BCC82442811C00108E2A /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7106BCC72442811C00108E2A /* LoginViewModelTests.swift */; };
 		7106BCCA2442814000108E2A /* RegisterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7106BCC92442814000108E2A /* RegisterViewModelTests.swift */; };
+		7106BCCC24429AF000108E2A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7106BCCB24429AF000108E2A /* UIView+Extension.swift */; };
+		7106BCCE24429CF200108E2A /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7106BCCD24429CF200108E2A /* Screen.swift */; };
 		AC3229B024400860002445A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3229AF24400860002445A8 /* AppDelegate.swift */; };
 		AC3229B224400860002445A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3229B124400860002445A8 /* SceneDelegate.swift */; };
 		AC3229B924400867002445A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC3229B824400867002445A8 /* Assets.xcassets */; };
@@ -20,7 +22,7 @@
 		AC8DDFBA244042670096AC61 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8DDFB9244042670096AC61 /* Stack.swift */; };
 		AC8DDFBC244046B20096AC61 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8DDFBB244046B20096AC61 /* LoginCoordinator.swift */; };
 		AC8DDFBE24404BB80096AC61 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8DDFBD24404BB80096AC61 /* LoginViewController.swift */; };
-		AC8DDFC124404CAF0096AC61 /* MainViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8DDFC024404CAF0096AC61 /* MainViewModels.swift */; };
+		AC8DDFC124404CAF0096AC61 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8DDFC024404CAF0096AC61 /* MainViewModel.swift */; };
 		AC8DDFC3244058170096AC61 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8DDFC2244058170096AC61 /* LoginViewModel.swift */; };
 		AC8DDFC524405A9F0096AC61 /* ViewModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8DDFC424405A9F0096AC61 /* ViewModelController.swift */; };
 		AC8DDFC824405BCF0096AC61 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8DDFC724405BCF0096AC61 /* UIViewController+Extension.swift */; };
@@ -43,6 +45,8 @@
 		7106BCC52442809200108E2A /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		7106BCC72442811C00108E2A /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		7106BCC92442814000108E2A /* RegisterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModelTests.swift; sourceTree = "<group>"; };
+		7106BCCB24429AF000108E2A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		7106BCCD24429CF200108E2A /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		AC3229AC24400860002445A8 /* MVVM-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3229AF24400860002445A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC3229B124400860002445A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,7 +61,7 @@
 		AC8DDFB9244042670096AC61 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		AC8DDFBB244046B20096AC61 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		AC8DDFBD24404BB80096AC61 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		AC8DDFC024404CAF0096AC61 /* MainViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModels.swift; sourceTree = "<group>"; };
+		AC8DDFC024404CAF0096AC61 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		AC8DDFC2244058170096AC61 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		AC8DDFC424405A9F0096AC61 /* ViewModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelController.swift; sourceTree = "<group>"; };
 		AC8DDFC724405BCF0096AC61 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -120,8 +124,8 @@
 				AC8DDFAF244041940096AC61 /* Coordinators */,
 				AC8DDFB2244041D60096AC61 /* Views */,
 				AC8DDFBF24404C9D0096AC61 /* ViewModels */,
-				AC8DDFC624405BB30096AC61 /* Extensions */,
 				AC8DDFB7244042520096AC61 /* Utilities */,
+				AC8DDFC624405BB30096AC61 /* Extensions */,
 				AC3229D124400891002445A8 /* Supporting Files */,
 				AC3229BD24400867002445A8 /* Info.plist */,
 			);
@@ -172,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				AC8DDFB9244042670096AC61 /* Stack.swift */,
+				7106BCCD24429CF200108E2A /* Screen.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -179,7 +184,7 @@
 		AC8DDFBF24404C9D0096AC61 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				AC8DDFC024404CAF0096AC61 /* MainViewModels.swift */,
+				AC8DDFC024404CAF0096AC61 /* MainViewModel.swift */,
 				AC8DDFC2244058170096AC61 /* LoginViewModel.swift */,
 				AC8DDFCD24405D450096AC61 /* RegisterViewModel.swift */,
 			);
@@ -189,6 +194,7 @@
 		AC8DDFC624405BB30096AC61 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				7106BCCB24429AF000108E2A /* UIView+Extension.swift */,
 				AC8DDFC724405BCF0096AC61 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
@@ -297,10 +303,11 @@
 			files = (
 				AC8DDFC824405BCF0096AC61 /* UIViewController+Extension.swift in Sources */,
 				AC8DDFCE24405D450096AC61 /* RegisterViewModel.swift in Sources */,
+				7106BCCC24429AF000108E2A /* UIView+Extension.swift in Sources */,
 				AC8DDFBE24404BB80096AC61 /* LoginViewController.swift in Sources */,
 				AC8DDFCA24405CFD0096AC61 /* RegisterCoordinator.swift in Sources */,
 				AC8DDFC524405A9F0096AC61 /* ViewModelController.swift in Sources */,
-				AC8DDFC124404CAF0096AC61 /* MainViewModels.swift in Sources */,
+				AC8DDFC124404CAF0096AC61 /* MainViewModel.swift in Sources */,
 				AC8DDFB1244041AB0096AC61 /* AppCoordinator.swift in Sources */,
 				AC8DDFB6244042120096AC61 /* MainCoordinator.swift in Sources */,
 				AC8DDFBA244042670096AC61 /* Stack.swift in Sources */,
@@ -308,6 +315,7 @@
 				AC8DDFCC24405D2C0096AC61 /* RegisterViewController.swift in Sources */,
 				AC3229B024400860002445A8 /* AppDelegate.swift in Sources */,
 				AC3229B224400860002445A8 /* SceneDelegate.swift in Sources */,
+				7106BCCE24429CF200108E2A /* Screen.swift in Sources */,
 				AC8DDFC3244058170096AC61 /* LoginViewModel.swift in Sources */,
 				AC8DDFB4244041F10096AC61 /* MainViewController.swift in Sources */,
 			);

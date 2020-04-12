@@ -16,7 +16,7 @@ class LoginViewModel: ViewModelProtocol {
 
     var coordinator: LoginViewModelDelegate?
     
-    func showRegister() {
+    func showSignUp() {
         coordinator?.gotoRegister()
     }
     

@@ -28,4 +28,8 @@ extension MainCoordinator: MainViewModelDelegate {
         LoginCoordinator(window: window).start()
     }
     
+    func gotoRegister() {
+        RegisterCoordinator(window: window).start()
+    }
+    
 }

@@ -17,11 +17,12 @@ class AppCoordinator {
     init(window: UIWindow) {
         self.window = window
         coordinatorStack.push("\(self)")
+        print("Push: \(coordinatorStack)")
     }
     
     deinit {
         coordinatorStack.pop()
-        print(coordinatorStack)
+        print("Pop: \(coordinatorStack)")
     }
     
     func start() {

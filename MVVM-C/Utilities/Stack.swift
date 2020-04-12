@@ -22,7 +22,6 @@ struct Stack<T> {
             return nil
         }
         return items.removeLast()
-        
     }
     
     public func peek() -> T? {
@@ -44,7 +43,7 @@ extension Stack: CustomStringConvertible where T == String {
             }
        
             if name.contains("Coordinator") {
-                name = String(name.dropLast(11)) // Coordinator
+                name = String(name.dropLast(11)) // remove "Coordinator"
             }
             
             if index != items.count - 1 {
