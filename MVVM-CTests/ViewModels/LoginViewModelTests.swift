@@ -12,13 +12,53 @@ import XCTest
 class LoginViewModelTests: XCTestCase {
     
     var sut: LoginViewModel!
+    var dataModel: LoginDataModelMock!
+    var coordinator: LoginCoordinatorMock!
     
     override func setUp() {
-        sut = LoginViewModel()
+        dataModel = LoginDataModelMock()
+        coordinator = LoginCoordinatorMock()
+        sut = LoginViewModel(dataModel: dataModel)
+        sut.coordinator = coordinator
     }
     
     func testInit() {
-        XCTAssertNotNil(sut)
+        XCTAssertNil(sut.validationError)
+    }
+    
+    func testLogin() {
+        let async = expectation(description: "async")
+        
+        sut.login(username: "user", password: "pwd") { _ in
+            async.fulfill()
+            XCTAssert(self.coordinator.isGotoMainCalled)
+        }
+        
+        XCTAssert(dataModel.isLoginCalled)
+        wait(for: [async], timeout: 1)
+    }
+    
+    func testValide() {
+        var isValid = sut.validate(username: "_abc")
+        XCTAssertFalse(isValid)
+        XCTAssertEqual(sut.validationError, "Invalid Username")
+        
+        isValid = sut.validate(username: ".abcd")
+        XCTAssertFalse(isValid)
+        XCTAssertEqual(sut.validationError, "Invalid Username")
+        
+        isValid = sut.validate(username: "0abc")
+        XCTAssertFalse(isValid)
+        XCTAssertEqual(sut.validationError, "Invalid Username")
+        
+        isValid = sut.validate(username: "abcd")
+        XCTAssert(isValid)
+        XCTAssertEqual(sut.validationError, nil)
+    }
+    
+    func testShowRegister() {
+        sut.showRegister()
+        XCTAssert(coordinator.isGotoRegisterCalled)
     }
     
 }

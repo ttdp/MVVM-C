@@ -13,6 +13,7 @@ class MainViewController: ViewModelController<MainViewModel> {
     lazy var loginButton: UIBarButtonItem = {
         return UIBarButtonItem(title: Constant.login, style: .plain, target: self, action: #selector(handleLogin))
     }()
+    
     lazy var logoutButton: UIBarButtonItem = {
         return UIBarButtonItem(title: Constant.logout, style: .plain, target: self, action: #selector(handleLogout))
     }()

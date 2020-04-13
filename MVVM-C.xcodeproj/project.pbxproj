@@ -20,6 +20,14 @@
 		AC4076D72443F3A2005E9DCF /* LoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4076D62443F3A2005E9DCF /* LoginDataModel.swift */; };
 		AC4076D92443F40C005E9DCF /* RegisterDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4076D82443F40C005E9DCF /* RegisterDataModel.swift */; };
 		AC4076DB2443F9B7005E9DCF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4076DA2443F9B7005E9DCF /* Constant.swift */; };
+		AC4076DD24440638005E9DCF /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4076DC24440638005E9DCF /* Dynamic.swift */; };
+		AC4076DF24440983005E9DCF /* Outcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4076DE24440983005E9DCF /* Outcome.swift */; };
+		AC4076E32444319B005E9DCF /* MainCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4076E22444319B005E9DCF /* MainCoordinatorMock.swift */; };
+		AC4076E5244431AD005E9DCF /* MainDataModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4076E4244431AD005E9DCF /* MainDataModelMock.swift */; };
+		AC4076E724443257005E9DCF /* LoginDataModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4076E624443257005E9DCF /* LoginDataModelMock.swift */; };
+		AC4076E924443294005E9DCF /* LoginCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4076E824443294005E9DCF /* LoginCoordinatorMock.swift */; };
+		AC4076EB24443300005E9DCF /* RegisterDataModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4076EA24443300005E9DCF /* RegisterDataModelMock.swift */; };
+		AC4076ED24443332005E9DCF /* RegisterCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4076EC24443332005E9DCF /* RegisterCoordinatorMock.swift */; };
 		AC8DDFB1244041AB0096AC61 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8DDFB0244041AB0096AC61 /* AppCoordinator.swift */; };
 		AC8DDFB4244041F10096AC61 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8DDFB3244041F10096AC61 /* MainViewController.swift */; };
 		AC8DDFB6244042120096AC61 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8DDFB5244042120096AC61 /* MainCoordinator.swift */; };
@@ -63,6 +71,14 @@
 		AC4076D62443F3A2005E9DCF /* LoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataModel.swift; sourceTree = "<group>"; };
 		AC4076D82443F40C005E9DCF /* RegisterDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDataModel.swift; sourceTree = "<group>"; };
 		AC4076DA2443F9B7005E9DCF /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		AC4076DC24440638005E9DCF /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		AC4076DE24440983005E9DCF /* Outcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outcome.swift; sourceTree = "<group>"; };
+		AC4076E22444319B005E9DCF /* MainCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorMock.swift; sourceTree = "<group>"; };
+		AC4076E4244431AD005E9DCF /* MainDataModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataModelMock.swift; sourceTree = "<group>"; };
+		AC4076E624443257005E9DCF /* LoginDataModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataModelMock.swift; sourceTree = "<group>"; };
+		AC4076E824443294005E9DCF /* LoginCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorMock.swift; sourceTree = "<group>"; };
+		AC4076EA24443300005E9DCF /* RegisterDataModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDataModelMock.swift; sourceTree = "<group>"; };
+		AC4076EC24443332005E9DCF /* RegisterCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinatorMock.swift; sourceTree = "<group>"; };
 		AC8DDFB0244041AB0096AC61 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		AC8DDFB3244041F10096AC61 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AC8DDFB5244042120096AC61 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
@@ -143,6 +159,7 @@
 		AC3229C524400868002445A8 /* MVVM-CTests */ = {
 			isa = PBXGroup;
 			children = (
+				AC4076E024443179005E9DCF /* Mocks */,
 				7106BCC42442806200108E2A /* ViewModels */,
 				AC3229C824400868002445A8 /* Info.plist */,
 			);
@@ -156,6 +173,19 @@
 				AC3229BA24400867002445A8 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC4076E024443179005E9DCF /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				AC4076E4244431AD005E9DCF /* MainDataModelMock.swift */,
+				AC4076E22444319B005E9DCF /* MainCoordinatorMock.swift */,
+				AC4076E624443257005E9DCF /* LoginDataModelMock.swift */,
+				AC4076E824443294005E9DCF /* LoginCoordinatorMock.swift */,
+				AC4076EA24443300005E9DCF /* RegisterDataModelMock.swift */,
+				AC4076EC24443332005E9DCF /* RegisterCoordinatorMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		AC8DDFAF244041940096AC61 /* Coordinators */ = {
@@ -185,7 +215,9 @@
 			children = (
 				AC8DDFB9244042670096AC61 /* Stack.swift */,
 				7106BCCD24429CF200108E2A /* Screen.swift */,
+				AC4076DC24440638005E9DCF /* Dynamic.swift */,
 				AC4076DA2443F9B7005E9DCF /* Constant.swift */,
+				AC4076DE24440983005E9DCF /* Outcome.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -318,8 +350,10 @@
 				AC8DDFCE24405D450096AC61 /* RegisterViewModel.swift in Sources */,
 				7106BCCC24429AF000108E2A /* UIView+Extension.swift in Sources */,
 				AC8DDFBE24404BB80096AC61 /* LoginViewController.swift in Sources */,
+				AC4076DF24440983005E9DCF /* Outcome.swift in Sources */,
 				AC8DDFCA24405CFD0096AC61 /* RegisterCoordinator.swift in Sources */,
 				AC8DDFC524405A9F0096AC61 /* ViewModelController.swift in Sources */,
+				AC4076DD24440638005E9DCF /* Dynamic.swift in Sources */,
 				AC8DDFC124404CAF0096AC61 /* MainViewModel.swift in Sources */,
 				AC8DDFB1244041AB0096AC61 /* AppCoordinator.swift in Sources */,
 				AC8DDFB6244042120096AC61 /* MainCoordinator.swift in Sources */,
@@ -341,9 +375,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC4076EB24443300005E9DCF /* RegisterDataModelMock.swift in Sources */,
+				AC4076ED24443332005E9DCF /* RegisterCoordinatorMock.swift in Sources */,
 				7106BCCA2442814000108E2A /* RegisterViewModelTests.swift in Sources */,
+				AC4076E724443257005E9DCF /* LoginDataModelMock.swift in Sources */,
+				AC4076E5244431AD005E9DCF /* MainDataModelMock.swift in Sources */,
 				7106BCC82442811C00108E2A /* LoginViewModelTests.swift in Sources */,
+				AC4076E924443294005E9DCF /* LoginCoordinatorMock.swift in Sources */,
 				7106BCC62442809200108E2A /* MainViewModelTests.swift in Sources */,
+				AC4076E32444319B005E9DCF /* MainCoordinatorMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

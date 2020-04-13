@@ -62,7 +62,7 @@ class LoginViewController: ViewModelController<LoginViewModel> {
         usernameLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -100).isActive = true
         
         view.addSubview(usernameField)
-        view.addConstraints(format: "H:[v0(160)]", views: usernameField)
+        view.addConstraints(format: "H:[v0(180)]", views: usernameField)
         view.addConstraints(format: "V:[v0(40)]", views: usernameField)
         usernameField.leadingAnchor.constraint(equalTo: usernameLabel.trailingAnchor, constant: 10).isActive = true
         usernameField.centerYAnchor.constraint(equalTo: usernameLabel.centerYAnchor).isActive = true
@@ -74,7 +74,7 @@ class LoginViewController: ViewModelController<LoginViewModel> {
         passwordLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -40).isActive = true
         
         view.addSubview(passwordField)
-        view.addConstraints(format: "H:[v0(160)]", views: passwordField)
+        view.addConstraints(format: "H:[v0(180)]", views: passwordField)
         view.addConstraints(format: "V:[v0(40)]", views: passwordField)
         passwordField.leadingAnchor.constraint(equalTo: passwordLabel.trailingAnchor, constant: 10).isActive = true
         passwordField.centerYAnchor.constraint(equalTo: passwordLabel.centerYAnchor).isActive = true
@@ -93,7 +93,19 @@ class LoginViewController: ViewModelController<LoginViewModel> {
     }
     
     @objc func handleSignIn() {
-        viewModel.login()
+        guard
+            let username = usernameField.text, !username.isEmpty,
+            let password = passwordField.text, !password.isEmpty
+            else {
+                print("Please fill in all fields")
+                return
+        }
+        
+        viewModel.login(username: username, password: password) { outcome in
+            if let error = outcome.errorInfo {
+                print(error)
+            }
+        }
     }
     
 }

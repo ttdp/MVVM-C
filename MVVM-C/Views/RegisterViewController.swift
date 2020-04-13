@@ -84,7 +84,7 @@ class RegisterViewController: ViewModelController<RegisterViewModel> {
         emailLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -220).isActive = true
         
         view.addSubview(emailField)
-        view.addConstraints(format: "H:[v0(160)]", views: emailField)
+        view.addConstraints(format: "H:[v0(180)]", views: emailField)
         view.addConstraints(format: "V:[v0(40)]", views: emailField)
         emailField.leadingAnchor.constraint(equalTo: emailLabel.trailingAnchor, constant: 10).isActive = true
         emailField.centerYAnchor.constraint(equalTo: emailLabel.centerYAnchor).isActive = true
@@ -96,7 +96,7 @@ class RegisterViewController: ViewModelController<RegisterViewModel> {
         usernameLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -160).isActive = true
         
         view.addSubview(usernameField)
-        view.addConstraints(format: "H:[v0(160)]", views: usernameField)
+        view.addConstraints(format: "H:[v0(180)]", views: usernameField)
         view.addConstraints(format: "V:[v0(40)]", views: usernameField)
         usernameField.leadingAnchor.constraint(equalTo: usernameLabel.trailingAnchor, constant: 10).isActive = true
         usernameField.centerYAnchor.constraint(equalTo: usernameLabel.centerYAnchor).isActive = true
@@ -108,7 +108,7 @@ class RegisterViewController: ViewModelController<RegisterViewModel> {
         passwordLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -100).isActive = true
         
         view.addSubview(passwordField)
-        view.addConstraints(format: "H:[v0(160)]", views: passwordField)
+        view.addConstraints(format: "H:[v0(180)]", views: passwordField)
         view.addConstraints(format: "V:[v0(40)]", views: passwordField)
         passwordField.leadingAnchor.constraint(equalTo: passwordLabel.trailingAnchor, constant: 10).isActive = true
         passwordField.centerYAnchor.constraint(equalTo: passwordLabel.centerYAnchor).isActive = true
@@ -120,7 +120,7 @@ class RegisterViewController: ViewModelController<RegisterViewModel> {
         confirmLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -40).isActive = true
         
         view.addSubview(confirmField)
-        view.addConstraints(format: "H:[v0(160)]", views: confirmField)
+        view.addConstraints(format: "H:[v0(180)]", views: confirmField)
         view.addConstraints(format: "V:[v0(40)]", views: confirmField)
         confirmField.leadingAnchor.constraint(equalTo: confirmLabel.trailingAnchor, constant: 10).isActive = true
         confirmField.centerYAnchor.constraint(equalTo: confirmLabel.centerYAnchor).isActive = true
@@ -135,7 +135,21 @@ class RegisterViewController: ViewModelController<RegisterViewModel> {
     // MARK: - Action
     
     @objc func handleSignUp() {
-        viewModel.signUp()
+        guard
+            let email = emailField.text, !email.isEmpty,
+            let username = usernameField.text, !username.isEmpty,
+            let password = passwordField.text, !password.isEmpty,
+            let confirm = confirmField.text, !confirm.isEmpty
+            else {
+                print("Please fill in all fields")
+                return
+        }
+        
+        viewModel.register(email: email, username: username, password: password, confirm: confirm) { outcome in
+            if let error = outcome.errorInfo {
+                print(error)
+            }
+        }
     }
     
 }

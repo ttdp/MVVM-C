@@ -12,13 +12,33 @@ import XCTest
 class MainViewModelTests: XCTestCase {
     
     var sut: MainViewModel!
+    var dataModel: MainDataModelMock!
+    var coordinator: MainCoordinatorMock!
     
     override func setUp() {
-        sut = MainViewModel()
+        dataModel = MainDataModelMock()
+        coordinator = MainCoordinatorMock()
+        sut = MainViewModel(dataModel: dataModel)
+        sut.coordinator = coordinator
     }
     
     func testInit() {
-        XCTAssertNotNil(sut)
+        XCTAssertEqual(sut.news, [])
+    }
+    
+    func testloadNews() {
+        sut.loadNews {}
+        XCTAssert(dataModel.isFetchNewsCalled)
+    }
+    
+    func testShowLogin() {
+        sut.showLogin()
+        XCTAssert(coordinator.isGotoLoginCalled)
+    }
+    
+    func testShowRegister() {
+        sut.showRegister()
+        XCTAssert(coordinator.isGotoRegisterCalled)
     }
     
 }
