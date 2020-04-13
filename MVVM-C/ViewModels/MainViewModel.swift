@@ -17,12 +17,34 @@ class MainViewModel: ViewModelProtocol {
     
     var coordinator: MainViewModelDelegate?
     
-    func showSignIn() {
+    var news: [String] = []
+    
+    let dataModel: MainDataModelProtocol
+    
+    init(dataModel: MainDataModelProtocol = MainDataModel()) {
+        self.dataModel = dataModel
+    }
+    
+    func loadNews(completion: @escaping () -> Void) {
+        dataModel.fetchNews { news in
+            self.news = news
+            
+            DispatchQueue.main.async {
+                completion()
+            }
+        }
+    }
+    
+    func showLogin() {
         coordinator?.gotoLogin()
     }
     
-    func showSignUp() {
+    func showRegister() {
         coordinator?.gotoRegister()
+    }
+    
+    func logout() {
+        UserDefaults.standard.set(false, forKey: Constant.isLoggedIn)
     }
     
 }

@@ -11,16 +11,13 @@ import UIKit
 class LoginCoordinator: AppCoordinator {
     
     override func start() {
-        let loginVM = LoginViewModel()
-        loginVM.coordinator = self
+        let viewModel = LoginViewModel()
+        viewModel.coordinator = self
         
-        let loginVC = LoginViewController(viewModel: loginVM)
+        let loginVC = LoginViewController(viewModel: viewModel)
         
-        guard let topVC = window.rootViewController?.topViewController() else {
-            return
-        }
-        
-        topVC.navigationController?.pushViewController(loginVC, animated: true)
+        let topVC = window.rootViewController?.topViewController()
+        topVC?.navigationController?.pushViewController(loginVC, animated: true)
     }
     
 }
@@ -29,6 +26,11 @@ extension LoginCoordinator: LoginViewModelDelegate {
     
     func gotoRegister() {
         RegisterCoordinator(window: window).start()
+    }
+    
+    func gotoMain() {
+        let topVC = window.rootViewController?.topViewController()
+        topVC?.navigationController?.popViewController(animated: true)
     }
     
 }

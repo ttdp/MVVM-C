@@ -9,15 +9,28 @@
 import Foundation
 
 protocol RegisterViewModelDelegate {
-    func gotoSignUp()
+    func gotoMain()
 }
 
 class RegisterViewModel: ViewModelProtocol {
     
     var coordinator: RegisterViewModelDelegate?
     
+    let dataModel: RegisterDataModelProtocol
+    
+    init(dataModel: RegisterDataModelProtocol = RegisterDataModel()) {
+        self.dataModel = dataModel
+    }
+    
     func signUp() {
-        coordinator?.gotoSignUp()
+        dataModel.register(email: "", username: "", password: "") { success in
+            if success {
+                UserDefaults.standard.set(success, forKey: Constant.isLoggedIn)
+                DispatchQueue.main.async {
+                    self.coordinator?.gotoMain()
+                }
+            }
+        }
     }
     
 }

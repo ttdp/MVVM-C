@@ -11,24 +11,22 @@ import UIKit
 class RegisterCoordinator: AppCoordinator {
 
     override func start() {
-        let registerVM = RegisterViewModel()
-        registerVM.coordinator = self
+        let viewModel = RegisterViewModel()
+        viewModel.coordinator = self
         
-        let registerVC = RegisterViewController(viewModel: registerVM)
+        let registerVC = RegisterViewController(viewModel: viewModel)
         
-        guard let topVC = window.rootViewController?.topViewController() else {
-            return
-        }
-        
-        topVC.navigationController?.pushViewController(registerVC, animated: true)
+        let topVC = window.rootViewController?.topViewController()
+        topVC?.navigationController?.pushViewController(registerVC, animated: true)
     }
     
 }
 
 extension RegisterCoordinator: RegisterViewModelDelegate {
     
-    func gotoSignUp() {
-        
+    func gotoMain() {
+        let topVC = window.rootViewController?.topViewController()
+        topVC?.navigationController?.popToRootViewController(animated: true)
     }
     
 }

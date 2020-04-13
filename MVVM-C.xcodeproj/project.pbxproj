@@ -16,6 +16,10 @@
 		AC3229B224400860002445A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3229B124400860002445A8 /* SceneDelegate.swift */; };
 		AC3229B924400867002445A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC3229B824400867002445A8 /* Assets.xcassets */; };
 		AC3229BC24400867002445A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC3229BA24400867002445A8 /* LaunchScreen.storyboard */; };
+		AC4076D52443F2AE005E9DCF /* MainDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4076D42443F2AE005E9DCF /* MainDataModel.swift */; };
+		AC4076D72443F3A2005E9DCF /* LoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4076D62443F3A2005E9DCF /* LoginDataModel.swift */; };
+		AC4076D92443F40C005E9DCF /* RegisterDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4076D82443F40C005E9DCF /* RegisterDataModel.swift */; };
+		AC4076DB2443F9B7005E9DCF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4076DA2443F9B7005E9DCF /* Constant.swift */; };
 		AC8DDFB1244041AB0096AC61 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8DDFB0244041AB0096AC61 /* AppCoordinator.swift */; };
 		AC8DDFB4244041F10096AC61 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8DDFB3244041F10096AC61 /* MainViewController.swift */; };
 		AC8DDFB6244042120096AC61 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8DDFB5244042120096AC61 /* MainCoordinator.swift */; };
@@ -55,6 +59,10 @@
 		AC3229BD24400867002445A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC3229C224400868002445A8 /* MVVM-CTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVVM-CTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3229C824400868002445A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC4076D42443F2AE005E9DCF /* MainDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataModel.swift; sourceTree = "<group>"; };
+		AC4076D62443F3A2005E9DCF /* LoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataModel.swift; sourceTree = "<group>"; };
+		AC4076D82443F40C005E9DCF /* RegisterDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDataModel.swift; sourceTree = "<group>"; };
+		AC4076DA2443F9B7005E9DCF /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		AC8DDFB0244041AB0096AC61 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		AC8DDFB3244041F10096AC61 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AC8DDFB5244042120096AC61 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
@@ -177,6 +185,7 @@
 			children = (
 				AC8DDFB9244042670096AC61 /* Stack.swift */,
 				7106BCCD24429CF200108E2A /* Screen.swift */,
+				AC4076DA2443F9B7005E9DCF /* Constant.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -185,8 +194,11 @@
 			isa = PBXGroup;
 			children = (
 				AC8DDFC024404CAF0096AC61 /* MainViewModel.swift */,
+				AC4076D42443F2AE005E9DCF /* MainDataModel.swift */,
 				AC8DDFC2244058170096AC61 /* LoginViewModel.swift */,
+				AC4076D62443F3A2005E9DCF /* LoginDataModel.swift */,
 				AC8DDFCD24405D450096AC61 /* RegisterViewModel.swift */,
+				AC4076D82443F40C005E9DCF /* RegisterDataModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -301,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC4076D52443F2AE005E9DCF /* MainDataModel.swift in Sources */,
 				AC8DDFC824405BCF0096AC61 /* UIViewController+Extension.swift in Sources */,
 				AC8DDFCE24405D450096AC61 /* RegisterViewModel.swift in Sources */,
 				7106BCCC24429AF000108E2A /* UIView+Extension.swift in Sources */,
@@ -310,13 +323,16 @@
 				AC8DDFC124404CAF0096AC61 /* MainViewModel.swift in Sources */,
 				AC8DDFB1244041AB0096AC61 /* AppCoordinator.swift in Sources */,
 				AC8DDFB6244042120096AC61 /* MainCoordinator.swift in Sources */,
+				AC4076D72443F3A2005E9DCF /* LoginDataModel.swift in Sources */,
 				AC8DDFBA244042670096AC61 /* Stack.swift in Sources */,
 				AC8DDFBC244046B20096AC61 /* LoginCoordinator.swift in Sources */,
 				AC8DDFCC24405D2C0096AC61 /* RegisterViewController.swift in Sources */,
+				AC4076DB2443F9B7005E9DCF /* Constant.swift in Sources */,
 				AC3229B024400860002445A8 /* AppDelegate.swift in Sources */,
 				AC3229B224400860002445A8 /* SceneDelegate.swift in Sources */,
 				7106BCCE24429CF200108E2A /* Screen.swift in Sources */,
 				AC8DDFC3244058170096AC61 /* LoginViewModel.swift in Sources */,
+				AC4076D92443F40C005E9DCF /* RegisterDataModel.swift in Sources */,
 				AC8DDFB4244041F10096AC61 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,14 +10,39 @@ import UIKit
 
 class MainViewController: ViewModelController<MainViewModel> {
     
+    lazy var loginButton: UIBarButtonItem = {
+        return UIBarButtonItem(title: Constant.login, style: .plain, target: self, action: #selector(handleLogin))
+    }()
+    lazy var logoutButton: UIBarButtonItem = {
+        return UIBarButtonItem(title: Constant.logout, style: .plain, target: self, action: #selector(handleLogout))
+    }()
+    
+    lazy var registerButton: UIBarButtonItem = {
+        return UIBarButtonItem(title: Constant.register, style: .plain, target: self, action: #selector(handleRegister))
+    }()
+    
+    var isLoggedIn: Bool {
+        return UserDefaults.standard.bool(forKey: Constant.isLoggedIn)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let signInButton = UIBarButtonItem(title: "Sign in", style: .plain, target: self, action: #selector(handleSignIn))
-        navigationItem.leftBarButtonItem = signInButton
+        viewModel.loadNews {
+            // Refresh news feed
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        let signUpButton = UIBarButtonItem(title: "Sign up", style: .plain, target: self, action: #selector(handleSignUp))
-        navigationItem.rightBarButtonItem = signUpButton
+        if isLoggedIn {
+            navigationItem.leftBarButtonItem = logoutButton
+            navigationItem.rightBarButtonItem = nil
+        } else {
+            navigationItem.leftBarButtonItem = loginButton
+            navigationItem.rightBarButtonItem = registerButton
+        }
     }
     
     // MARK: - View
@@ -48,12 +73,19 @@ class MainViewController: ViewModelController<MainViewModel> {
     
     // MARK: - Action
     
-    @objc func handleSignIn() {
-        viewModel.showSignIn()
+    @objc func handleLogin() {
+        viewModel.showLogin()
     }
     
-    @objc func handleSignUp() {
-        viewModel.showSignUp()
+    @objc func handleRegister() {
+        viewModel.showRegister()
+    }
+    
+    @objc func handleLogout() {
+        viewModel.logout()
+        
+        navigationItem.leftBarButtonItem = loginButton
+        navigationItem.rightBarButtonItem = registerButton
     }
     
 }

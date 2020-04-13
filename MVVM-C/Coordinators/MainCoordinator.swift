@@ -11,10 +11,10 @@ import UIKit
 class MainCoordinator: AppCoordinator {
     
     override func start() {
-        let mainVM = MainViewModel()
-        mainVM.coordinator = self
+        let viewModel = MainViewModel()
+        viewModel.coordinator = self
         
-        let mainVC = MainViewController(viewModel: mainVM)
+        let mainVC = MainViewController(viewModel: viewModel)
         
         window.rootViewController = UINavigationController(rootViewController: mainVC)
         window.makeKeyAndVisible()
